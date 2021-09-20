@@ -13,9 +13,8 @@ public with sharing class BubbleSort {
      * A list with 5 items will start with  and unsortedIndex of 5 and decrement after each loop until it reaches 0
      * @param integersToSort The list of integers we want to sort.
      *
-     * @return A sorted list
      */
-    public List<Integer> sort(List<Integer> integersToSort) {
+    public void sort(List<Integer> integersToSort) {
         for (Integer unsortedIndex = integersToSort.size() - 1; unsortedIndex > 0; unsortedIndex--) {
             //A nested for loop should be an automatic signal that an algo will degrade quickly
             for (Integer i = 0; i < unsortedIndex; i++) {
@@ -25,7 +24,6 @@ public with sharing class BubbleSort {
                 }
             }
         }
-        return null;
     }
     private void swap(List<Integer> arrayToSort, Integer i, Integer j) {
         if (i == j) {
