@@ -41,5 +41,8 @@
     "**/{aura,lwc}/**": [
       "eslint"
     ]
+  },
+  "dependencies": {
+    "g": "^2.0.1"
   }
 }
