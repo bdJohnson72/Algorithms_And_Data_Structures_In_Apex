@@ -27,14 +27,13 @@ public with sharing class RecursionExamples {
    * @return The reversed string
    */
   public static String stringReversalRecursive(String str) {
-    List<String> strList = str.split('');
-    List<String> results = new List<String>();
-    //Here is our base case
-    while (strList.size() > 0) {
-      //our recursive case
-      results.add(strList.remove(strList.size() - 1));
+    String result = '';
+    if (str.length() == 1) {
+      return str;
     }
-    return String.join(results, '');
+    result += str.substring(str.length() - 1, str.length()) +
+            stringReversalRecursive(str.substring(0, str.length() - 1));
+    return result;
   }
 
   /**
