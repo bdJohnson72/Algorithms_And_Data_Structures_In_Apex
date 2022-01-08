@@ -1,0 +1,22 @@
+<template>
+  <lightning-card
+    title="Factorial Calculator"
+    icon-name="standard:bot"
+    class="slds-m-around_small"
+  >
+    <lightning-input
+      label="value to calculate"
+      class="slds-p-around_medium"
+      type="number"
+    >
+    </lightning-input>
+    <p class="output-field slds-m-horizontal_medium">result: {result}</p>
+    <lightning-button
+      label="Calculate Factorial"
+      onclick={handleClick}
+      variant="neutral"
+      class="slds-p-around_medium"
+    >
+    </lightning-button>
+  </lightning-card>
+</template>

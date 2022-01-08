@@ -1,0 +1,6 @@
+.output-field {
+  border: 1px solid #dddbda;
+  line-height: 1.875rem;
+  min-height: calc(1.875rem + (1px * 2));
+  margin-bottom: 1rem;
+}
