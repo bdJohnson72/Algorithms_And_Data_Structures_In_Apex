@@ -69,4 +69,26 @@ private class RecursionExamples_Tests {
     Integer result = RecursionExamples.fibonacci(5);
     System.assert(result == 5, 'It should compute fibonacci');
   }
+
+  @IsTest
+  static void isShouldReturnTrueForPalindrome() {
+    //given
+    String work = 'rotor';
+    //when
+    Boolean result = RecursionExamples.isPalindrome(work);
+    //then
+    System.assert(result == true, 'It should return true for anagram');
+  }
+  @IsTest
+  static void itShouldReturnFalseForPalindrome() {
+    //given
+    String word = 'test';
+    //when
+    Boolean result = RecursionExamples.isPalindrome(word);
+    //then
+    System.assert(
+      result == false,
+      'It should not return true for a palindrome'
+    );
+  }
 }

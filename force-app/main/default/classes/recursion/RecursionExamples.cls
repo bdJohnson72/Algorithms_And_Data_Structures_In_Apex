@@ -31,8 +31,9 @@ public with sharing class RecursionExamples {
     if (str.length() == 1) {
       return str;
     }
-    result += str.substring(str.length() - 1, str.length()) +
-            stringReversalRecursive(str.substring(0, str.length() - 1));
+    result +=
+      str.substring(str.length() - 1, str.length()) +
+      stringReversalRecursive(str.substring(0, str.length() - 1));
     return result;
   }
 
@@ -95,5 +96,26 @@ public with sharing class RecursionExamples {
       return num;
     }
     return fibonacci(num - 2) + fibonacci(num - 1);
+  }
+
+  /**
+   * @description A recursive method to determine is a word is a palindrome.
+   * like rotor or madam,
+   * @param word to evaluate
+   *
+   * @return Boolean
+   */
+
+  public static Boolean isPalindrome(String word) {
+    if (word.length() <= 1) {
+      return true;
+    }
+    if (
+      word.substring(0, 1) == word.substring(word.length() - 1, word.length())
+    ) {
+      return isPalindrome(word.substring(1, word.length() - 1));
+    } else {
+      return false;
+    }
   }
 }
