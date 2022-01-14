@@ -44,6 +44,8 @@ public with sharing class RecursionExamples {
    * @return factorial of input
    */
   public static Integer factorialIterative(Integer num) {
+    // factorial is the product of the integers and all the integers below it
+    // 5! = 5 * 4 * 3 * 2 * 1 = 120
     Integer result = 1;
     for (Integer i = 1; i <= num; i++) {
       result *= i;
@@ -82,6 +84,12 @@ public with sharing class RecursionExamples {
     return num *= power(num, power - 1);
   }
 
+  /**
+   * @description Calcuate sum of numbers in a range
+   * @param num The highest number in the range
+   *
+   * @return Integer: The sum
+   */
   public static Integer range(Integer num) {
     // Base case
     if (num == 0) {
