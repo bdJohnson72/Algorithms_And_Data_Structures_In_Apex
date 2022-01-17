@@ -27,6 +27,14 @@ my [youtube series](https://www.youtube.com/playlist?list=PLdt84CMzTQBbon-6Oy2a_
 - [Bubble Sort](https://github.com/bdJohnson72/Algorithms_And_Data_Structures_In_Apex/tree/master/force-app/main/default/classes)
   - [Watch it on Youtube](https://youtu.be/KJVDLgfzCL8) -[Selection Sort]()
 - [Selection Sort](https://github.com/bdJohnson72/Algorithms_And_Data_Structures_In_Apex/blob/master/force-app/main/default/classes/basic_sorting/SelectionSort.cls)
-    - Like Bubble Sort but puts the smallest value into sorted position instead of the largest. Algo runs at O(n^2) but is slightly optomized compared to Bubble Sort. It does one swap per pass for the lowest value. 
+  - Like Bubble Sort but puts the smallest value into sorted position instead of the largest. Algo runs at O(n^2) but is
+    slightly optomized compared to Bubble Sort. It does one swap per pass for the lowest value.
 - [Insertion Sort](https://github.com/bdJohnson72/Algorithms_And_Data_Structures_In_Apex/blob/master/force-app/main/default/classes/basic_sorting/InsertionSort.cls)
-  - Runs at O(n^2). Iterates from index 1 to final position in the collection. If value is smaller than its predecessor it compares to elements before and swaps.    
+  - Runs at O(n^2). Iterates from index 1 to final position in the collection. If value is smaller than its predecessor
+    it compares to elements before and swaps.
+
+## [Data Structures]()
+
+-[Singly Linked List]()
+-A data structure with a head, tail and length property. Unlike a Apex List it has no index. Each node in the list
+contains a pointer to the next element.
