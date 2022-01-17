@@ -1,4 +1,5 @@
 # Algorithms and Data Structures in Apex
+![Image of Cody from Salesforce](https://github.com/bdJohnson72/Algorithms_And_Data_Structures_In_Apex/blob/master/images/recipes-logo.png)
 
 Welcome this repo is meant as a companion to
 my [youtube series](https://www.youtube.com/playlist?list=PLdt84CMzTQBbon-6Oy2a_rIsOyzMTrjnn).
