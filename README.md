@@ -1,4 +1,5 @@
 # Algorithms and Data Structures in Apex
+
 ![Image of Cody from Salesforce](https://github.com/bdJohnson72/Algorithms_And_Data_Structures_In_Apex/blob/master/images/recipes-logo.png)
 
 Welcome this repo is meant as a companion to
@@ -40,6 +41,7 @@ my [youtube series](https://www.youtube.com/playlist?list=PLdt84CMzTQBbon-6Oy2a_
 
 ## [Data Structures]()
 
--[Singly Linked List]()
--A data structure with a head, tail and length property. Unlike a Apex List it has no index. Each node in the list
-contains a pointer to the next element.
+- [Singly Linked List]() :construction:
+  - A data structure with a head, tail and length property. Unlike a Apex List it has no index. Each node in the list
+    contains a pointer to the next element. You can not use collection[i] instead it is collection.next().
+  - It contains the properties head, length and tail.
