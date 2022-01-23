@@ -10,8 +10,8 @@ public with sharing class BinarySearch {
     // Steps is only here to show the performance of binary search. It is not required for the algo.
     Integer steps = 0;
     Integer left = 0;
-    Integer right = listToSearch.size() - 1;
-    while (left <= right) {
+    Integer right = listToSearch.size();
+    while (left < right) {
       steps++;
       // find the middle value
       Integer middle = (left + right) / 2;
