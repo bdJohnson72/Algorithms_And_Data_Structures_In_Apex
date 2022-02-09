@@ -27,8 +27,6 @@ private class DoublyLinkedList_Tests {
     doublyLinkedList.addToEnd(30);
     //then
     DoublyLinkedList.Node node = doublyLinkedList.removeFromEnd();
-    System.debug('popped node = ' + node.previous);
-    System.debug('popped node = ' + node.next);
     System.assert(30 == node.value);
     System.assert(20 == doublyLinkedList.tail.value);
     System.assert(2 == doublyLinkedList.size);

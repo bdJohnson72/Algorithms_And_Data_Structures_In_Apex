@@ -36,7 +36,6 @@ public with sharing class DoublyLinkedList {
       this.head = null;
       this.tail = null;
       returnValue.previous = null;
-      System.debug('return value: ' + returnValue.previous);
       return returnValue;
     }
 
