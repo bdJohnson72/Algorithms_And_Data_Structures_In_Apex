@@ -68,4 +68,20 @@ private class OpportunityBST_Tests {
       'It should return the correct node'
     );
   }
+  @isTest
+  static void testBreadthFirstSearch() {
+    //given
+    Opportunity opp = new Opportunity(Amount = 1000);
+    OpportunityBST bst = new OpportunityBST();
+    bst.push(opp);
+    Opportunity opp1 = new Opportunity(Amount = 1100);
+    Opportunity opp2 = new Opportunity(Amount = 900);
+    Opportunity opp3 = new Opportunity(Amount = 800);
+    bst.push(opp1);
+    bst.push(opp2);
+    bst.push(opp3);
+    //when
+    List<Node_Opp_BST> bfsresults = bst.breadthFirstSearch();
+    System.assertEquals(4, bfsresults.size(), 'It should return all nodes');
+  }
 }

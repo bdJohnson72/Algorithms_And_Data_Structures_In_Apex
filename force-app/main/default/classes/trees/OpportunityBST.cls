@@ -56,4 +56,26 @@ public with sharing class OpportunityBST {
     }
     return null;
   }
+
+  /**
+   * use to traverse the tree
+   */
+  public List<Node_Opp_BST> breadthFirstSearch() {
+    Node_Opp_BST current = this.root;
+    List<Node_Opp_BST> data = new List<Node_Opp_BST>();
+    //we need to use the list as  FIFO data structure
+    List<Node_Opp_BST> queue = new List<Node_Opp_BST>();
+    queue.add(this.root);
+    while (!queue.isEmpty()) {
+      current = queue.remove(0);
+      data.add(current);
+      if (current.left != null) {
+        queue.add(current.left);
+      }
+      if (current.right != null) {
+        queue.add(current.right);
+      }
+    }
+    return data;
+  }
 }
