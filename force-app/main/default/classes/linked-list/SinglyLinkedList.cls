@@ -6,9 +6,9 @@ public with sharing class SinglyLinkedList {
   public class SinglyLinkedListException extends Exception {
   }
 
-  public Node head { public get; private set; }
-  public Node tail { public get; private set; }
-  public Integer size { public get; private set; }
+  public Node head { get; private set; }
+  public Node tail { get; private set; }
+  public Integer size { get; private set; }
 
   public SinglyLinkedList() {
     this.head = null;
@@ -21,14 +21,14 @@ public with sharing class SinglyLinkedList {
    * @param data Object to used in Node
    */
   public void addToFront(Object data) {
-    Node node = new Node(data);
+    Node newNode = new Node(data);
     if (this.head == null) {
-      this.head = node;
+      this.head = newNode;
       this.tail = this.head;
     } else {
-      //do this in order
-      node.next = this.head;
-      head = node;
+      //do these in order!!
+      newNode.next = this.head;
+      this.head = newNode;
     }
     this.size++;
   }
@@ -39,13 +39,13 @@ public with sharing class SinglyLinkedList {
    * @param data Object to be used in Node
    */
   public void addToBack(Object data) {
-    Node node = new Node(data);
+    Node newNode = new Node(data);
     if (this.head == null) {
-      this.head = node;
+      this.head = newNode;
       this.tail = this.head;
     } else {
-      this.tail.next = node;
-      this.tail = node;
+      this.tail.next = newNode;
+      this.tail = newNode;
     }
     this.size++;
   }
@@ -57,11 +57,11 @@ public with sharing class SinglyLinkedList {
    */
   public Object removeFromFront() {
     if (this.size == 0) {
-      throw new SinglyLinkedListException('Empty List');
+      throw new SinglyLinkedListException('The list is empty');
     }
     Node remove = this.head;
     this.head = this.head.next;
-    size--;
+    this.size--;
     return remove.data;
   }
 
@@ -72,7 +72,7 @@ public with sharing class SinglyLinkedList {
    */
   public Object removeFromBack() {
     if (this.size == 0) {
-      throw new SinglyLinkedListException('Empty List');
+      throw new SinglyLinkedListException('The list is empty');
     }
     if (this.size == 1) {
       Node temp = this.head;

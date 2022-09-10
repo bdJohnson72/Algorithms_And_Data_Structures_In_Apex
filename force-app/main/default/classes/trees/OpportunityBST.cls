@@ -78,4 +78,40 @@ public with sharing class OpportunityBST {
     }
     return data;
   }
+
+  public override String toString() {
+    return super.toString();
+  }
+
+  public void dfs_PreOrder(Node_Opp_BST node) {
+    if (node == null) {
+      return;
+    }
+    System.debug(node.value);
+    //recurse on the left subtree
+    dfs_PreOrder(node.left);
+    //recurse on the right subtree
+    dfs_PreOrder(node.right);
+  }
+
+  public void preOrderDFSNoRecursion() {
+    // Instead of recursions we can use a list as a queue
+    List<Node_Opp_BST> stack = new List<Node_Opp_BST>();
+    stack.add(this.root);
+
+    while (!stack.isEmpty()) {
+      //pop last item off the stack
+      Node_Opp_BST current = stack.remove(stack.size() - 1);
+      System.debug(current.toString());
+      // Note that in the iterative solution we need to
+      // add the right subtree to the queue first.
+      // The opposite of the recursive solution
+      if (current.right != null) {
+        stack.add(current.right);
+      }
+      if (current.left != null) {
+        stack.add(current.left);
+      }
+    }
+  }
 }

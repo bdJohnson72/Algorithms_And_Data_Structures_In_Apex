@@ -17,6 +17,7 @@ public with sharing class ValidPalindrome {
     }
     return true;
   }
+
   public static Boolean isPalindromeRecurse(String str) {
     System.debug('checking ' + str);
     String regex = '[/\\W]';

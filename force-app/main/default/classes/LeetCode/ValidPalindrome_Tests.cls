@@ -13,6 +13,25 @@ private class ValidPalindrome_Tests {
     //then
     System.assertEquals(true, result, 'It is a palindrome');
   }
+
+  @IsTest
+  static void isPalindrome2() {
+    //given
+    String testString = 'A Toyota. Race fast, safe car. A Toyota';
+    //when
+    Boolean result = ValidPalindrome.isPalindrome(testString);
+    //then
+    System.assertEquals(true, result, 'It is a palindrome');
+  }
+  @IsTest
+  static void isPalindrome3() {
+    //given
+    String testString = 'A lot not new I saw as I went on to L.A';
+    //when
+    Boolean result = ValidPalindrome.isPalindrome(testString);
+    //then
+    System.assertEquals(true, result, 'It is a palindrome');
+  }
   @IsTest
   static void isPalindromeNegative() {
     //given

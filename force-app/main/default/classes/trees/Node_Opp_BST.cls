@@ -12,4 +12,15 @@ public with sharing class Node_Opp_BST {
     this.left = null;
     this.right = null;
   }
+
+  public override String toString() {
+    return 'value is ' +
+      value +
+      '\n' +
+      ' right node: ' +
+      right +
+      '\n' +
+      ' left node ' +
+      left;
+  }
 }
