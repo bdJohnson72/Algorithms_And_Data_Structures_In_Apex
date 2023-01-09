@@ -43,6 +43,17 @@ private class AnagramSolver_Tests {
     }
 
     @IsTest
+    static void returnTrueOnAnagram2() {
+        //given
+        String name1 = 'Tom Marvolo Riddle';
+        String name2 = 'I am Lord Voldemort';
+        //when
+        Boolean result = AnagramSolver.isAnagram2(name1, name2);
+        //then
+        System.assert(result == true);
+    }
+
+    @IsTest
     static void returnFalseNotAnagram() {
         //given
         String name1 = 'dog';

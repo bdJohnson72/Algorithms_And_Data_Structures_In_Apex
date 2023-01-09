@@ -59,4 +59,33 @@ public with sharing class AnagramSolver {
         }
         return frequencyCountMap;
     }
+
+    public static Boolean isAnagram2(String str1, String str2) {
+        str1 = str1.toLowerCase().deleteWhitespace();
+        str2 = str2.toLowerCase().deleteWhitespace();
+        if(str1.length() != str2.length()){
+            return false;
+        }
+        Map<Integer, Integer> charFrequencyMap1 = getCharFrequencyMap(str1);
+        Map<Integer, Integer> charFrequencyMap2 = getCharFrequencyMap(str2);
+
+        for(Integer charFrequency : charFrequencyMap1.keySet()){
+            if (!charFrequencyMap2.containsKey(charFrequency) || charFrequencyMap1.get(charFrequency) != charFrequencyMap2.get(charFrequency)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static  Map<Integer, Integer> getCharFrequencyMap(String str){
+        Map<Integer, Integer> charFrequencyMap = new Map<Integer, Integer>();
+        for (Integer i = 0; i < str.length(); i++) {
+            if (charFrequencyMap.containsKey(str.charAt(i))) {
+                charFrequencyMap.put(str.charAt(i), charFrequencyMap.get(str.charAt(i)) + 1);
+            }else {
+                charFrequencyMap.put(str.charAt(i), 1);
+            }
+        }
+        return charFrequencyMap;
+    }
 }
