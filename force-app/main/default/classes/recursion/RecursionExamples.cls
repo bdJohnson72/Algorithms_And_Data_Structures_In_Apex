@@ -103,7 +103,7 @@ public with sharing class RecursionExamples {
     if (num < 2) {
       return num;
     }
-    return fibonacci(num - 2) + fibonacci(num - 1);
+    return fibonacci(num - 1) + fibonacci(num - 2);
   }
 
   /**
@@ -115,6 +115,7 @@ public with sharing class RecursionExamples {
    */
 
   public static Boolean isPalindrome(String word) {
+    System.debug('current word = ' + word);
     if (word.length() <= 1) {
       return true;
     }

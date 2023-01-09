@@ -4,29 +4,34 @@
 
 @IsTest
 private class StackDemo_Tests {
-    @IsTest
-    static void itShouldReturnFalseMissingDelimiter() {
-        //given
-        String test =  '{Hello World';
-        //when
-        Boolean result = StackDemo.isMatched(test);
-        System.assert(result == false);
-    }
-    @IsTest
-    static void itShouldReturnFalseWrongDelimiter() {
-        //given
-        String test =  '{Hello World]';
-        //when
-        Boolean result = StackDemo.isMatched(test);
-        System.assert(result == false);
-    }
+  @IsTest
+  static void itShouldReturnFalseMissingDelimiter() {
+    //given
+    String test = '{';
+    //when
+    Boolean result = StackDemo.isMatched(test);
+    System.assert(result == false);
+  }
+  @IsTest
+  static void itShouldReturnFalseWrongDelimiter() {
+    //given
+    String test = '{]';
+    //when
+    Boolean result = StackDemo.isMatched(test);
+    System.assert(result == false);
+  }
 
-    @IsTest
-    static void itShouldReturnTrue() {
-        //given
-        String test =  '{Hello (stack) World}';
-        //when
-        Boolean result = StackDemo.isMatched(test);
-        System.assert(result == true);
-    }
+  @IsTest
+  static void itShouldReturnTrue() {
+    //given
+    String test = '{ () }';
+    //when
+    Boolean result = StackDemo.isMatched(test);
+    System.assert(result == true);
+  }
+  @IsTest
+  static void itShouldReturnTrue2() {
+    String test = '((([[{}]])))';
+    System.assert(StackDemo.isMatched(test) == true);
+  }
 }

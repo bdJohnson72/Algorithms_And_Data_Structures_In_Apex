@@ -73,7 +73,7 @@ private class RecursionExamples_Tests {
   @IsTest
   static void isShouldReturnTrueForPalindrome() {
     //given
-    String work = 'rotor';
+    String work = 'madam';
     //when
     Boolean result = RecursionExamples.isPalindrome(work);
     //then
