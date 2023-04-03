@@ -39,6 +39,8 @@ public with sharing class BinarySearch {
         left = middle + 1;
       }
     }
+    //If the right and left index become equal
+    if(left == right) return right;
     //value was not found
     System.debug(LoggingLevel.INFO, 'It took ' + steps + ' steps to search');
     return -1;
